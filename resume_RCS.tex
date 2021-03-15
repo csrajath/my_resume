@@ -1,0 +1,206 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage[sfdefault]{sourcesanspro}
+
+\RequirePackage{tikz}
+\usetikzlibrary{arrows}
+\RequirePackage[skins]{tcolorbox}
+\RequirePackage{enumitem}
+
+\newcommand{\cvtag}[1]{%
+  \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{#1};
+}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+%----------HEADING----------
+\begin{center}
+    \textbf{\huge \scshape Rajath Chikkatur Srinivasa} \\ \vspace{1pt} \vspace
+    {Atlanta, GA, USA}
+    \small(470) 909-2758 $|$ \href{mailto:rajathcs.1996@gmail.com}{\underline{rajathcs.1996@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/rajathcs/}{\underline{linkedin.com/in/rajathcs/}} $|$
+    \href{https://github.com/csrajath}{\underline{github.com/csrajath}}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Georgia State University}{}
+      {Graduate Teaching Assistant \& Research Member\href{http://www.panacealab.org/}{{-Panacea Lab}}}{Jan 2021 - Present}
+      \resumeItemListStart
+        \resumeItem{Used Git, Github \& Zenhub in for managing the student projects for Software Engineering course.}
+        \resumeItem{Built python package, using NLP techniques like NER, to understand temporal data and performed \\ 
+        sentiment analysis and visualization of tweets.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Informatics Ltd.}{}
+      {Product Developer}{Oct 2019 - Nov 2020}
+      \resumeItemListStart
+        \resumeItem{Utilized Linux JQ tool for processing large scale data and streamlined using {\textit{PySpark \& Azure Databricks.}}}
+        \resumeItem{Built web scrapping bots, using {\textit{BeautifulSoup}} \& {\textit{PyPDF2}}, and scheduled it using {\textit{Apache Airflow}}}
+        \resumeItem{Developed various components of admin module, using {\textit{Django \& React}}, for company's flagship product.}
+    \resumeItemListEnd
+    \resumeSubheading
+      {K.P.M.G.}{}
+      {Analyst}{Jun 2018 - Jun 2020}
+      \resumeItemListStart
+        \resumeItem{Queried Snowflake using SQL and Debugged 14, 000 lines of PL/SQL codebase.}        
+        \resumeItem{Reviewed Python APIs used to built AWS infrastructure ({\textit{EC2, S3, CloudFormation, Lambda \& RDS}})}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Cell Propulsion Ltd.}{} 
+      {Software Engineering Intern }{April 2018 - June 2018} 
+      \resumeItemListStart
+        \resumeItem{Designed and developed company’s \href{http://www.cellpropulsion.com/}{website} using HTMl, CSS, JavaScript and WordPress.}
+        \resumeItem{Developed machine learning model to predict the correctness and health of sensor data in the autonomous driving system’s on-board computer. Leveraged Python and Shell scripting for building custom YOCTO packages that integrates the ML models.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+    \resumeProjectHeading
+          {\textbf{An Online QBE Processor for MySQL}}{}
+          \resumeItemListStart
+            \resumeItem{Implemented a Web-based QBE (Query By Example) Processor for MySQL databases. This processor will convert the visual query language into a MySQL query.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{A Framework for Building Inverted Index on Textual Data}}{}
+          \resumeItemListStart
+            \resumeItem{Built a scalable inverted index of Wikipedia corpus using {\textit {Hadoop \& MapReduce}}}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Parallel Mining of Frequent Itemsets in Real-Time Retail Dataset}}{}
+          \resumeItemListStart
+            \resumeItem{Created a web application that efficiently processes large scale retail transaction data using association mining algorithms. Performed automatic parallelization, load balancing and fault tolerance on a multi node-cluster.}
+          \resumeItemListEnd       
+      \resumeProjectHeading
+          {\textbf{Automatic Extraction of Medication Names in Tweets}}{}
+          \resumeItemListStart
+            \resumeItem{Automatically extract \& classify medication names in tweets by training and testing data using {\textit {Random Forest, Logistic Regression, Naïve Bayes, SVM \& Perceptron}} models.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Dashboard for Real-Time visualization of Pedestrian Crashes}}{}
+          \resumeItemListStart
+            \resumeItem{Developed a Data Analytics tool for visually representation of the patterns observed for pedestrian-bicycle crashes and deployed on {\textit {Heroku}}}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd    
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \cvtag {Python} \cvtag {Java}  \cvtag {SQL}   \cvtag {JavaScript} \cvtag {HTML} \cvtag {CSS} \cvtag {ReactJS} \cvtag {Django} \\
+     \cvtag {Hadoop}  \cvtag {Spark} \cvtag {Tensorflow} \cvtag {AWS}  \cvtag {Azure} \cvtag {Jenkins} \cvtag {Docker} \cvtag {Git}
+    }}
+ \end{itemize}
+
+%-----------EDUCATION-----------
+\section{Education}
+    \resumeSubheading
+      {M.S. - Computer Science}{}
+      {Georgia State University, Atlanta}{Aug 2020 - Present}\newline
+      
+      {\footnotesize Algorithms, Data Science, Natural Language Processing}
+      \resumeSubheading
+      {B.E. - Information Science}{}
+      {Don Bosco Institute of Technology, Bangalore}{Aug 2014 - May 2018}\newline
+      
+      {\footnotesize Data Structures, Web Programming, Software Engineering}
+  \resumeSubHeadingListEnd
+ 
+%-------------------------------------------
+\end{document}
